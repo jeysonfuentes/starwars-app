@@ -12,9 +12,12 @@
 }
 
 .result {
-  @apply flex flex-col justify-center align-middle content-center mb-4;
+  @apply flex flex-col justify-center align-middle content-center mb-4 mt-4;
+  min-height: 400px;
   &__list {
-    @apply mt-4 mb-4 p-0 grid grid-cols-1 content-center gap-x-6 gap-y-1 lg:gap-x-8 md:grid-cols-4 sm:grid-cols-3 sm:m-3 sm:gap-y-4 ;
+    @apply mt-4 mb-4 p-0 grid grid-cols-1 gap-x-6 gap-y-5 lg:gap-x-8 md:gap-y-5 md:grid-cols-4 sm:grid-cols-3 sm:m-1 sm:gap-y-4 ;
+    min-height: 400px;
+
   }
 }
 

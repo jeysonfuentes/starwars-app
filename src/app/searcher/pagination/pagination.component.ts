@@ -39,5 +39,4 @@ export class PaginationComponent implements OnInit, OnChanges {
     this.currentPage = number;
     this.changePage.emit(number)
   }
-
 }

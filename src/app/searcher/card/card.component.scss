@@ -1,5 +1,5 @@
 .card {
-  @apply bg-white p-2 rounded shadow-sm;
+  @apply bg-white p-2 rounded shadow-lg;
   &__title {
     @apply p-2 font-semibold;
   };
@@ -18,7 +18,7 @@
   &__buttons {
     @apply flex justify-center;
     & button {
-      @apply bg-gray-800 text-white px-4 py-1 rounded hover:bg-gray-700;
+      @apply bg-gray-800 w-full text-white px-4 py-1 rounded hover:bg-gray-700;
     }
   }
 }
