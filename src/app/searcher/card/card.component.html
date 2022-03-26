@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card__title">
+    <h3>{{character.name}}</h3>
+  </div>
+  <div class="card__content">
+    <ul class="card__info">
+      <li class="card__info-item"><span>Gender</span>: {{character.gender | gender}}</li>
+      <li class="card__info-item"><span>Height</span>: {{character.height}} cm</li>
+      <li class="card__info-item"><span>Weigth</span>: {{character.mass}} Kg</li>
+      <li class="card__info-item"><span>Films appear</span>: {{character.films.length}}</li>
+    </ul>
+
+  </div>
+  <div class="card__buttons">
+    <button (click)="goToDetail()">Go Character</button>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+<app-spin-loader *ngIf="loading"></app-spin-loader>
+<div class="character" *ngIf="!loading">
+  <div class="flex gap-5 px-4 py-5 sm:px-6">
+    <div>
+      <a routerLink="/"> <span class="sr-only">Previous</span>
+        <!-- Heroicon name: solid/chevron-left -->
+        <svg class="h-10 w-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+          aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+            clip-rule="evenodd" />
+        </svg></a>
+    </div>
+    <div>
+      <h3 class="character__title">{{character?.name}}</h3>
+      <p class="character__subtitle">Character Information</p>
+    </div>
+  </div>
+  <div class="character__content ">
+    <dl>
+      <div class="character__item ">
+        <dt class="character__item-title ">Full name</dt>
+        <dd class="character__item-value ">{{character?.name}}</dd>
+      </div>
+      <div class="character__item">
+        <dt class="character__item-title">Birth year</dt>
+        <dd class="character__item-value">{{character?.birth_year}}</dd>
+      </div>
+      <div class="character__item">
+        <dt class="character__item-title">Gender</dt>
+        <dd class="character__item-value">{{character?.gender | gender}}</dd>
+      </div>
+      <div class="character__item">
+        <dt class="character__item-title">Weigth</dt>
+        <dd class="character__item-value">{{character?.mass}} Kg</dd>
+      </div>
+      <div class="character__item">
+        <dt class="character__item-title">Height</dt>
+        <dd class="character__item-value">{{character?.height}} cm</dd>
+      </div>
+      <div class="character__item">
+        <dt class="character__item-title">Homeworld</dt>
+        <dd class="character__item-value">
+          <dl class="mt-1 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+            <div class="pt-4">
+              <dt class="font-medium text-gray-900">Name</dt>
+              <dd class="mt-2 text-sm text-gray-500">{{homeworld?.name}}</dd>
+            </div>
+
+            <div class="pt-4">
+              <dt class="font-medium text-gray-900">Population</dt>
+              <dd class="mt-2 text-sm text-gray-500">{{homeworld?.population}} 🙋</dd>
+            </div>
+
+            <div class="pt-4">
+              <dt class="font-medium text-gray-900">Terrain</dt>
+              <dd class="mt-2 text-sm text-gray-500">{{homeworld?.terrain}}</dd>
+            </div>
+
+          </dl>
+        </dd>
+      </div>
+    </dl>
+  </div>
+  <div class="character__films">
+    <h3>Films</h3>
+    <div class="character__list">
+      <app-film *ngFor="let film of films" [film]="film"></app-film>
+    </div>
+  </div>
+</div>

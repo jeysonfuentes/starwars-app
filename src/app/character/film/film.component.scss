@@ -1,0 +1,23 @@
+.film {
+  @apply bg-white flex-col p-4 shadow;
+  &__header {
+    & h4 {
+      @apply font-bold text-lg;
+    }
+    & p {
+      @apply italic text-sm;
+    }
+  }
+  &__content {
+    @apply flex flex-col mt-3 border-t-2 border-gray-200 pt-3
+  }
+  &__item {
+    @apply flex flex-col mb-2  overflow-ellipsis;
+    & label {
+      @apply font-bold text-xs
+    }
+    & p {
+      @apply text-xs italic text-sm overflow-ellipsis
+    }
+  }
+}

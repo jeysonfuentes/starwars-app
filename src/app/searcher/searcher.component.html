@@ -1,0 +1,22 @@
+<!-- Search Input -->
+<div class="search">
+  <div class="search__input">
+    <input [(ngModel)]="query" type="text">
+    <button class="search__button" (click)="search()">Buscar</button>
+  </div>
+  <p class="search__result">{{resultText}}</p>
+</div>
+
+
+<!-- Result -->
+<div>
+
+  <div class="result">
+    <app-spin-loader *ngIf="loading"></app-spin-loader>
+    <div class="result__list" *ngIf="!loading">
+      <app-card *ngFor="let character of characters" [character]="character" (goToCharacter)="goToCharacter(character)">
+      </app-card>
+    </div>
+  </div>
+  <app-pagination [totalResults]="totalResults" (changePage)="changePage($event)"></app-pagination>
+</div>

@@ -1,0 +1,21 @@
+.search {
+  @apply flex flex-col;
+  &__input {
+    @apply flex w-full justify-center mb-4;
+    & > input {
+      @apply p-2 w-8/12;
+    }
+    & button {
+      @apply bg-gray-800 text-white px-4 py-2 rounded-t-none rounded-l-none rounded-r-md rounded-b-md hover:bg-gray-700
+    }
+  }
+}
+
+.result {
+  @apply flex flex-col justify-center align-middle content-center mb-4;
+  &__list {
+    @apply mt-4 mb-4 p-0 grid grid-cols-1 content-center gap-x-6 gap-y-1 lg:gap-x-8 md:grid-cols-4 sm:grid-cols-3 sm:m-3 sm:gap-y-4 ;
+  }
+}
+
+
