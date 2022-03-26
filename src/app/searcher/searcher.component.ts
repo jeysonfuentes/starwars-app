@@ -27,13 +27,13 @@ export class SearcherComponent implements OnInit {
   getCharacters() {
     this.loading = true;
     this.peopleService
-      .getFilterCharacters(this.query, this.currentPage)
+      .getFilterCharacters(this.query.trim(), this.currentPage)
       .subscribe(({ results, count }: IResponseAPI<IPeople>) => {
         this.loading = false;
         this.characters = results;
         this.totalResults = count;
         this.resultText =
-          this.query.length > 0
+        this.query.trim().length > 0
             ? `Found ${count} result(s) for "${this.query}"`
             : `Found ${count} characters`;
         this.totalPages =

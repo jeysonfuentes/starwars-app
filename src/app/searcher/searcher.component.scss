@@ -1,9 +1,9 @@
 .search {
   @apply flex flex-col;
   &__input {
-    @apply flex w-full justify-center mb-4;
+    @apply flex w-full justify-center mb-4 ;
     & > input {
-      @apply p-2 w-8/12;
+      @apply p-2 w-8/12 rounded-r-none rounded-b-none rounded-t-md rounded-l-md;
     }
     & button {
       @apply bg-gray-800 text-white px-4 py-2 rounded-t-none rounded-l-none rounded-r-md rounded-b-md hover:bg-gray-700
